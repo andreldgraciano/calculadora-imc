@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+    <body class="flex justify-center items-center h-screen w-screen sm:px-12 sm:pt-12">
+        <div id="app" class="bg-blue-100 p-4 h-full sm:h-auto rounded space-y-4 min-w-[500px] max-w-[1000px] w-full">
+            <section class="flex flex-col sm:flex-row text-center sm:text-left">
+                <div class="w-full sm:w-1/2">
+                    <h2 class="font-semibold text-lg">Valores de IMC</h2>
+                    <ul id="listImcRanges"></ul>
+                </div>
+                <div class="w-full sm:w-1/2 mt-2 sm:mt-0">
+                    <h2 class="font-semibold text-lg">Descrição do IMC</h2>
+                    <ul id="listImcDescriptions"></ul>
+                </div>
+            </section>
+
+            <h2 class="font-semibold text-lg text-center sm:text-left">Calcule seu IMC</h2>
+
+            <section class="flex flex-col sm:flex-row items-center">
+                <form action="/" id="formImc" method="post" class="flex flex-col space-y-4 sm:w-1/2">
+                    <div>
+                        <label for="peso" class="block font-semibold">Peso (Kg):</label>
+                        <input type="text" name="peso" id="peso" class="pl-2 py-1 rounded focus:outline-blue-400" placeholder="Digite seu peso">
+                    </div>
+
+                    <div>
+                        <label for="altura" class="block font-semibold">Altura (cm):</label>
+                        <input type="text" name="altura" id="altura" class="pl-2 py-1 rounded focus:outline-blue-400" placeholder="Digite sua altura">
+                    </div>
+
+                    <button type="submit" class="bg-blue-300 px-2 py-1 rounded shadow shadow-blue-400 text-white hover:bg-blue-400 sm:place-self-start">Calcular</button>
+                </form>
+
+                <div id="resultado" class="min-w-48 sm:w-1/2 mt-4 sm:mt-0 min-h-32 bg-white rounded flex justify-center items-center"></div>
+            </section>
+        </div>
+       
+        <script src="js/index.js"></script>
+    </body>
+</html>
