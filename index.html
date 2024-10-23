@@ -7,8 +7,8 @@
     <title>IMC</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-    <body class="flex justify-center items-center h-screen w-screen sm:px-12 sm:pt-12">
-        <div id="app" class="bg-blue-100 p-4 h-full sm:h-auto rounded space-y-4 min-w-[500px] max-w-[1000px] w-full">
+    <body class="flex justify-center items-center h-dvh w-screen sm:px-12 bg-blue-100 sm:bg-white">
+        <div id="app" class="bg-blue-100 p-4 h-full sm:h-auto rounded space-y-4">
             <section class="flex flex-col sm:flex-row text-center sm:text-left">
                 <div class="w-full sm:w-1/2">
                     <h2 class="font-semibold text-lg">Valores de IMC</h2>
@@ -22,7 +22,7 @@
 
             <h2 class="font-semibold text-lg text-center sm:text-left">Calcule seu IMC</h2>
 
-            <section class="flex flex-col sm:flex-row items-center">
+            <section class="flex flex-col sm:flex-row items-center sm:gap-4 pb-4">
                 <form action="/" id="formImc" method="post" class="flex flex-col space-y-4 sm:w-1/2">
                     <div>
                         <label for="peso" class="block font-semibold">Peso (Kg):</label>
